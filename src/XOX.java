@@ -61,7 +61,7 @@ public class XOX {
         }
     }
 
-    public void ilkOyuncuOynadi(int pozisyon, char[][] oyunTahtasi){
+    private void ilkOyuncuOynadi(int pozisyon, char[][] oyunTahtasi){
         if (pozisyon==1){oyunTahtasi[0][0] = 'X';}
         else if (pozisyon==2) {oyunTahtasi[0][1] = 'X';}
         else if (pozisyon==3) {oyunTahtasi[0][2] = 'X';}
@@ -75,7 +75,7 @@ public class XOX {
             System.out.println("Hatali konum girisi yapildi");
         }
     }
-    public void ikinciOyuncuOynadi(int pozisyon, char[][] oyunTahtasi){
+    private void ikinciOyuncuOynadi(int pozisyon, char[][] oyunTahtasi){
         if (pozisyon==1){oyunTahtasi[0][0] = 'O';}
         else if (pozisyon==2) {oyunTahtasi[0][1] = 'O';}
         else if (pozisyon==3) {oyunTahtasi[0][2] = 'O';}
@@ -91,14 +91,14 @@ public class XOX {
 
     }
 
-    public static void oyunTahtasiGuncel(char[][] oyunTahtasi) {
+    private static void oyunTahtasiGuncel(char[][] oyunTahtasi) {
         System.out.println(oyunTahtasi[0][0] + "|" +  oyunTahtasi[0][1] + "|" +  oyunTahtasi[0][2] );
         System.out.println("-+-+-");
         System.out.println(oyunTahtasi[1][0] + "|" +  oyunTahtasi[1][1] + "|" +  oyunTahtasi[1][2] );
         System.out.println("-+-+-");
         System.out.println(oyunTahtasi[2][0] + "|" +  oyunTahtasi[2][1] + "|" +  oyunTahtasi[2][2] );
     }
-    public boolean birinciOyuncuKazandi(char[][] oyunTahtasi ){
+    private boolean birinciOyuncuKazandi(char[][] oyunTahtasi ){
         char isaret='X';
         if ((oyunTahtasi[0][0] == isaret && oyunTahtasi [0][1] == isaret && oyunTahtasi [0][2] == isaret) ||
                 (oyunTahtasi[1][0] == isaret && oyunTahtasi [1][1] == isaret && oyunTahtasi [1][2] == isaret) ||
@@ -119,7 +119,7 @@ return true;
         }
 
     }
-    public boolean ikinciOyuncuKazandi(char[][] oyunTahtasi ){
+    private boolean ikinciOyuncuKazandi(char[][] oyunTahtasi ){
         char isaret='O';
         if ((oyunTahtasi[0][0] == isaret && oyunTahtasi [0][1] == isaret && oyunTahtasi [0][2] == isaret) ||
                 (oyunTahtasi[1][0] == isaret && oyunTahtasi [1][1] == isaret && oyunTahtasi [1][2] == isaret) ||
